@@ -7,10 +7,10 @@
 
 enum {UP = -1, DOWN = 1, LEFT = -1, RIGHT = 1};
 
-void spawn_food();
-void spawn_snake();
-void game();
-void game_over();
+void spawn_food(WINDOW* win, int row, int col);
+void spawn_snake(WINDOW* win, int row, int col, int foodY, int foodX);
+void game(WINDOW* win, int snakeY, int snakeX, int row, int col, int foodY, int foodX);
+void game_over(WINDOW* win, int row, int col);
 
 char mvHisY[SIZE]; // move history
 char mvHisX[SIZE];
